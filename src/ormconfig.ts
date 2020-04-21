@@ -6,7 +6,11 @@ dotenv.config();
 
 const config: ConnectionOptions = {
   type: 'postgres',
-  url: process.env.DB_URL,
+  host: process.env.TYPEORM_HOST,
+  port: parseInt(process.env.TYPEORM_PORT, 10),
+  //name: process.env.DB_NAME,
+  username: process.env.DB_USERNAME,
+  password: process.env.DB_PASSWORD,
 
   entities: [__dirname + '/**/*.entity{.ts,.js}'],
 
