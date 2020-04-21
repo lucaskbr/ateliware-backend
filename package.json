@@ -25,6 +25,7 @@
     "@nestjs/core": "^6.10.14",
     "@nestjs/platform-express": "^6.10.14",
     "@nestjs/typeorm": "^7.0.0",
+    "class-validator": "^0.12.1",
     "dotenv": "^8.2.0",
     "git-commit-msg-linter": "^2.4.2",
     "pg": "^8.0.2",
