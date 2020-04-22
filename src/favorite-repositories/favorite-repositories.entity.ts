@@ -15,7 +15,7 @@ export class FavoriteRepository {
   name: string;
 
   @Column()
-  ownerAvatar: string;
+  avatarOwnerUrl: string;
 
   @Column()
   url: string;
@@ -28,4 +28,10 @@ export class FavoriteRepository {
 
   @UpdateDateColumn({ type: 'timestamptz', select: false })
   updatedAt: Date;
+
+  constructor(name, avatarOwnerUrl, url) {
+    this.name = name;
+    this.avatarOwnerUrl = avatarOwnerUrl;
+    this.url = url;
+  }
 }
