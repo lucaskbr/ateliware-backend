@@ -16,6 +16,9 @@ export class FavoriteRepositoriesService {
 
   async findAll(page?: number): Promise<FavoriteRepository[]> {
     return this.favoriteRepositoriesRepository.find({
+      where: {
+        isActive: true,
+      },
       skip: (20 * page) | 0,
     });
   }
