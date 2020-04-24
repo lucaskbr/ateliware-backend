@@ -12,6 +12,9 @@ export class FavoriteRepository {
   id: number;
 
   @Column()
+  githubId: number;
+
+  @Column()
   name: string;
 
   @Column()
@@ -19,6 +22,9 @@ export class FavoriteRepository {
 
   @Column()
   url: string;
+
+  @Column({ default: true })
+  isActive: boolean;
 
   @CreateDateColumn({
     type: 'timestamptz',
