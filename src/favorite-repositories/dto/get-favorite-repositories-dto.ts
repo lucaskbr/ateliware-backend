@@ -1,7 +1,7 @@
-import { IsInt, Min } from 'class-validator';
+import { IsString, IsOptional } from 'class-validator';
 
 export class GetFavoriteRepositoriesDTO {
-  @IsInt()
-  @Min(0)
+  @IsOptional()
+  @IsString()
   page: number;
 }
