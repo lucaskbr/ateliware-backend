@@ -19,7 +19,8 @@ export class FavoriteRepositoriesService {
       where: {
         isActive: true,
       },
-      skip: (20 * page) | 0,
+      take: 9,
+      skip: page ? 9 * (page - 1) : 0,
     });
   }
 
