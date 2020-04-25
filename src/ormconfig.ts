@@ -15,7 +15,7 @@ const config: ConnectionOptions = {
 
   synchronize: process.env.TYPEORM_SYNC === 'true',
   migrationsRun: process.env.TYPEORM_MIGRATIONS_RUN === 'true',
-  logging: process.env.TYPEORM_LOGGING === 'true',
+  logging: ['error', 'migration', 'warn'],
   logger: 'file',
 
   migrations: [__dirname + '/migrations/**/*{.ts,.js}'],
